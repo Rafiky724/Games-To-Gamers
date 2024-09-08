@@ -1,22 +1,76 @@
+# Guía de Configuración para el Proyecto Django
 
+Este archivo describe los pasos para configurar y ejecutar el proyecto Django.
+
+## 1. Instalación de Dependencias
+
+Primero, asegúrate de tener `pip` instalado y actualizado. Luego, instala Django utilizando el siguiente comando:
+
+```bash
 pip install django
+```
 
+Genera un archivo `requirements.txt` con las dependencias del proyecto:
+
+```
 pip freeze > requirements.txt
+```
 
+Instala las dependencias desde `requirements.txt`:
+
+```
 pip install -r requirements.txt
+```
 
-django-admin startproject Universidad 
+## 2. Configuración del Proyecto Django
 
+Crea un nuevo proyecto Django llamado `Universidad`:
+
+```
+django-admin startproject Universidad
+```
+
+Dentro del proyecto, crea una nueva aplicación llamada `Academico`:
+
+```
 django-admin startapp Academico
+```
 
-*Migracion Inicial Del Proyecto*
+## 3. Migraciones
+
+Realiza las migraciones iniciales del proyecto:
+
+```
 python manage.py migrate
+```
 
-*Migracion De La Tabla A La Base De Datos*
+Crea las migraciones para la nueva aplicación y actualiza la base de datos:
+
+```
 python manage.py makemigrations
+python manage.py migrate
+```
 
-*Super Usuario para que maneje todo, buena practica*
-python manage.py createsuperuser  
+## 4. Crear un Superusuario
 
+Crea un superusuario para gestionar el panel de administración de Django:
+
+```
+python manage.py createsuperuser
+```
+
+Sigue las instrucciones para proporcionar el nombre de usuario, correo electrónico y contraseña.
+
+## 5. Ejecutar el Servidor de Desarrollo
+
+Finalmente, inicia el servidor de desarrollo para ejecutar el proyecto:
+
+```
 python manage.py runserver
+```
 
+Ahora puedes acceder a la aplicación a través de `http://127.0.0.1:8000/` y al panel de administración en `http://127.0.0.1:8000/admin/`.
+
+---
+
+Asegúrate de tener Python y Django instalados correctamente antes de ejecutar estos comandos. Si encuentras algún problema, revisa los mensajes de error para diagnosticar y solucionar el problema.

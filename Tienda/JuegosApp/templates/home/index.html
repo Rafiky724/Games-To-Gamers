@@ -1,0 +1,17 @@
+{% extends "../plantilla.html" %} 
+
+
+{% block title %} Games To Gamers {% endblock%} 
+
+
+{% block content %}
+
+    <div class="categorys_center">
+        {% include 'partials/categorys.html' %}
+    </div>
+
+    <div class="cards_center row">
+        {% include 'partials/card.html' with games=games %}
+    </div>
+    
+{% endblock %}

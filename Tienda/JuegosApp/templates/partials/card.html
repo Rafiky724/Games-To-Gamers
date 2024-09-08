@@ -1,0 +1,17 @@
+{% load static %} 
+
+{% for c in games %}
+  <div class="card" style="width: 18rem">
+    <img
+      src="{% if c.imagenes %}{{ c.imagenes.url }}{% else %}{% static 'path/to/default-image.jpg' %}{% endif %}"
+      class="card-img-top"
+      alt="{{ c.nombre }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ c.nombre }}</h5>
+      <p class="card-text">{{ c.descripcion }}</p>
+      <p class="card-text"><strong>Precio:</strong> {{ c.precio }}</p>
+      <a href="#" class="btn btn-primary">Ver más</a>
+    </div>
+  </div>
+{% endfor %}

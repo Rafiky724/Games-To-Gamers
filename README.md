@@ -12,13 +12,13 @@ pip install django
 
 Genera un archivo `requirements.txt` con las dependencias del proyecto:
 
-```
+```bash
 pip freeze > requirements.txt
 ```
 
 Instala las dependencias desde `requirements.txt`:
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -26,13 +26,13 @@ pip install -r requirements.txt
 
 Crea un nuevo proyecto Django llamado `Universidad`:
 
-```
+```bash
 django-admin startproject Universidad
 ```
 
 Dentro del proyecto, crea una nueva aplicación llamada `Academico`:
 
-```
+```bash
 django-admin startapp Academico
 ```
 
@@ -40,13 +40,13 @@ django-admin startapp Academico
 
 Realiza las migraciones iniciales del proyecto:
 
-```
+```bash
 python manage.py migrate
 ```
 
 Crea las migraciones para la nueva aplicación y actualiza la base de datos:
 
-```
+```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -55,7 +55,7 @@ python manage.py migrate
 
 Crea un superusuario para gestionar el panel de administración de Django:
 
-```
+```bash
 python manage.py createsuperuser
 ```
 
@@ -65,7 +65,7 @@ Sigue las instrucciones para proporcionar el nombre de usuario, correo electrón
 
 Finalmente, inicia el servidor de desarrollo para ejecutar el proyecto:
 
-```
+```bash
 python manage.py runserver
 ```
 

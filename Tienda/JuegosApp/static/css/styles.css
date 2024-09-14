@@ -14,31 +14,65 @@ body {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 100px;
-}
-
-.container_category {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  cursor: pointer;
+  height: 50px;
 }
 
 .cards_center {
-  margin: 20px;
+  margin: 10px auto;
   justify-content: center;
   gap: 15px;
-}
-
-.imageCategorys img {
-  width: 60px;
-  height: 60px;
 }
 
 .card {
   background-color: #d8d4ff !important;
   border: 2px solid #bbb1ff !important;
+}
+
+.image-card {
+  width: 18rem;
+  padding: 10px;
+}
+
+.image-card img {
+  border-radius: 10px;
+  max-height: 20rem;
+}
+
+.card-content {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.boton-ver-mas {
+  background-color: #bbb1ff;
+  color: #4618ac;
+}
+
+.text-title{
+  margin: 5px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.flexForm{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botonGuardar{
+  margin: 0 auto;
+}
+
+.textoTabla {
+  text-align: center;
+  margin: auto 0;
 }

@@ -1,0 +1,109 @@
+{% extends "../plantilla.html" %}
+
+{% block title %} Edit Game {% endblock %}
+
+{% block content %}
+
+<div class="flex">
+  <div class="col-md-11">
+   
+    <div class="card" style="margin: 10px auto;">
+      <h2 class="text-title">Edición De Juegos</h2>
+      <div class="card-body">
+        <form
+          action="{% url 'game' %}"
+          method="post"
+          enctype="multipart/form-data"
+          class="flexForm"
+        >
+          {% csrf_token %}
+          <div class="form-group">
+            <input
+              type="text"
+              id="txtCodigo"
+              name="txtCodigo"
+              class="form-control"
+              placeholder="Código"
+              value="{{ game.codigo }}" 
+              minlength="6"
+              max="6"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="txtNombre"
+              name="txtNombre"
+              class="form-control"
+              placeholder="Nombre"
+              value="{{ game.nombre }}" 
+              max="50"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="txtDescripcion"
+              name="txtDescripcion"
+              class="form-control"
+              placeholder="Descripcion"
+              value="{{ game.descripcion }}" 
+              max="50"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="numPrecio"
+              name="numPrecio"
+              class="form-control"
+              placeholder="Precio"
+              value="{{ game.precio|floatformat:2}}"
+              maxlength="50"
+              required
+              pattern="\d+(\,\d{2})?"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="txtPlataforma"
+              name="txtPlataforma"
+              class="form-control"
+              placeholder="Plataforma"
+              value="{{ game.plataforma }}" 
+              max="50"
+              required
+            />
+          </div>
+          <div class="form-group text-center">
+            <input
+              type="file"
+              id="imgImagen"
+              name="imgImagen"
+              class="form-control"
+            />
+            {% if game.imagenes %}
+            <div class="mt-3">
+              <img src="{{ game.imagenes.url }}" alt="{{ game.nombre }}" class="img-fluid" style="max-width: 150px;">
+            </div>
+            {% endif %}
+          </div>
+          <div class="form-group botonGuardar">
+            <button type="submit" class="btn btn-success  text-white">
+              Guardar
+            </button>
+            <button onclick="window.history.back();" type="submit" class="btn btn-danger  text-white">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

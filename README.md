@@ -24,16 +24,16 @@ pip install -r requirements.txt
 
 ## 2. Configuración del Proyecto Django
 
-Crea un nuevo proyecto Django llamado `Universidad`:
+Crea un nuevo proyecto Django llamado `Tienda`:
 
 ```bash
-django-admin startproject Universidad
+django-admin startproject Tienda
 ```
 
-Dentro del proyecto, crea una nueva aplicación llamada `Academico`:
+Dentro del proyecto, crea una nueva aplicación llamada `JuegosApp`:
 
 ```bash
-django-admin startapp Academico
+django-admin startapp JuegosApp
 ```
 
 ## 3. Migraciones

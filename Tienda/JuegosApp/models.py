@@ -10,5 +10,8 @@ class Game(models.Model):
     imagenes = models.ImageField(upload_to='juegos_imagenes/', blank=True, null=True) # ImageField is used for save images
     
     def __str__(self):
-        texto = '{0} ({1})'
-        return texto.format(self.nombre, self.precio)
+        return f'{self.nombre} ({self.precio})'
+
+# class Review(models.Model):
+    
+    

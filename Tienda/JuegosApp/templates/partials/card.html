@@ -11,7 +11,7 @@
       <p class="card-text"><strong>Descripcion: </strong>{{ c.descripcion }}</p>
       <p class="card-text"><strong>Precio:</strong> {{ c.precio }}</p>
       <p class="card-text"><strong>Para:</strong> {{ c.plataforma }}</p>
-      <a href="#" class="btn boton-ver-mas"><strong>Ver más</strong></a>
+      <a href="{% url 'detail' c.codigo %}" class="btn boton-ver-mas"><strong>Ver más</strong></a>
     </div>
   </div>
 {% endfor %}

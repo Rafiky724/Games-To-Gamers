@@ -10,6 +10,10 @@ def controlGame(request):
     games_list = Game.objects.all()
     return render(request, 'controlGame/control.html', {'games': games_list})
 
+def details(request, codigo):
+    game = get_object_or_404(Game, codigo=codigo)
+    return render(request, 'detailsGame/details.html', {'game': game})
+
 def registerGame(request):
     if request.method == 'POST':
         codigo = request.POST['txtCodigo']
